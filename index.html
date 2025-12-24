@@ -2,78 +2,334 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>EBS Trading LLC | Company Profile</title>
-  <meta name="description" content="EBS Trading LLC is a UAE-based trading company serving UAE, KSA, and GCC markets. Parent company of Delta Wraps." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EBS Trading LLC | Company Profile</title>
+  <meta name="description" content="EBS Trading LLC is a UAE-based trading company serving UAE, KSA, and GCC with automotive solutions including PPF, color vinyl wraps, and nano ceramic window films under the Delta Wraps brand." />
+
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #222;
+    :root{
+      --bg:#0b0f17;
+      --card:#0f1624;
+      --text:#e7eefc;
+      --muted:#a9b7d0;
+      --line:rgba(255,255,255,.08);
+      --accent:#f7c63a; /* gold */
+      --accent2:#4ea1ff; /* blue */
+      --max:1100px;
     }
-    header {
-      background: #0f172a;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(78,161,255,.20), transparent 55%),
+                  radial-gradient(900px 500px at 80% 10%, rgba(247,198,58,.18), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
+
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,23,.65);
+      border-bottom: 1px solid var(--line);
     }
-    h1, h2 {
-      color: #0f172a;
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #666;
-      font-size: 14px;
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.3px;
+    }
+    .badge{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, rgba(78,161,255,.25), rgba(247,198,58,.25));
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      font-weight:900;
+    }
+    nav{
+      display:flex; gap:16px; flex-wrap:wrap;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    nav a:hover{color:var(--text)}
+    .cta{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      font-size:13px; color:var(--muted);
+    }
+    .pill{
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+
+    /* Hero */
+    .hero{padding:38px 0 18px}
+    .hero-grid{
+      display:grid; gap:18px;
+      grid-template-columns: 1.25fr .75fr;
+      align-items:stretch;
+    }
+    .hero-card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius:18px;
+      padding:22px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(26px, 3vw, 40px);
+      line-height:1.15;
+    }
+    .sub{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:15px;
+      max-width:58ch;
+    }
+    .hero-actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      font-weight:700;
+      font-size:14px;
+      background: rgba(255,255,255,.03);
+    }
+    .btn.primary{
+      border-color: rgba(247,198,58,.35);
+      background: linear-gradient(135deg, rgba(247,198,58,.18), rgba(78,161,255,.10));
+    }
+
+    /* Quick facts */
+    .facts{
+      display:grid; gap:10px;
+      grid-template-columns: 1fr;
+      height:100%;
+    }
+    .fact{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:14px;
+    }
+    .fact b{display:block; font-size:13px; color:var(--muted); font-weight:700}
+    .fact span{display:block; font-size:15px; margin-top:4px}
+
+    /* Sections */
+    section{padding:18px 0}
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:18px;
+      padding:18px;
+      min-height: 170px;
+    }
+    h2{
+      margin:0 0 8px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    p{margin:0; color:var(--muted); font-size:14px}
+    ul{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    li{margin:6px 0}
+
+    .highlight{
+      display:inline-block;
+      padding:3px 10px;
+      border-radius:999px;
+      border:1px solid rgba(247,198,58,.30);
+      background: rgba(247,198,58,.10);
+      color:var(--text);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.25px;
+      margin-left:8px;
+    }
+
+    /* Footer */
+    footer{
+      padding:22px 0 30px;
+      border-top:1px solid var(--line);
+      margin-top:10px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
     }
   </style>
 </head>
+
 <body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="badge">E</div>
+        <div>
+          <div style="font-size:14px; font-weight:900;">EBS Trading LLC</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:700;">Company Profile • UAE, KSA & GCC</div>
+        </div>
+      </div>
 
-<header>
-  <h1>EBS Trading LLC</h1>
-  <p>Company Profile | UAE · KSA · GCC</p>
-</header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#brand">Our Brand</a>
+        <a href="#offerings">Offerings</a>
+        <a href="#values">Values</a>
+      </nav>
 
-<section>
-  <h2>About Us</h2>
-  <p>
-    EBS Trading LLC is a UAE-based trading company operating primarily in the
-    United Arab Emirates, Saudi Arabia, and other GCC markets.
-    The company focuses on building strong, reputable brands and long-term
-    business relationships across the region.
-  </p>
-</section>
+      <div class="cta">
+        <div class="pill">B2B Supply • Wholesale</div>
+      </div>
+    </div>
+  </div>
 
-<section>
-  <h2>Our Brand</h2>
-  <p>
-    <strong>Delta Wraps</strong> is the flagship brand under EBS Trading LLC,
-    specializing in automotive solutions including Paint Protection Films (PPF),
-    Color Vinyl Wraps, and Nano Ceramic Window Films.
-  </p>
-</section>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <h1>Automotive Films & Accessories Supply Partner <span class="highlight">B2B</span></h1>
+        <p class="sub">
+          EBS Trading LLC is a UAE-based trading company focused on building strong brands and long-term
+          business relationships across the region. We serve UAE, Saudi Arabia, and GCC markets through
+          quality-driven products and reliable supply.
+        </p>
 
-<section>
-  <h2>Business Philosophy</h2>
-  <p>
-    We believe in transparency, quality-driven products, and sustainable growth.
-    Our objective is to create trust, value, and a strong market presence across
-    the GCC.
-  </p>
-</section>
+        <div class="hero-actions">
+          <a class="btn primary" href="#offerings">View Offerings</a>
+          <a class="btn" href="#brand">Delta Wraps</a>
+        </div>
+      </div>
 
-<footer>
-  © 2025 EBS Trading LLC. All rights reserved.
-</footer>
+      <div class="facts">
+        <div class="fact">
+          <b>Markets</b>
+          <span>UAE • KSA • GCC</span>
+        </div>
+        <div class="fact">
+          <b>Category</b>
+          <span>Automotive films & accessories</span>
+        </div>
+        <div class="fact">
+          <b>Focus</b>
+          <span>Consistency • Quality • Long-term partnerships</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
+    <section id="about">
+      <div class="grid">
+        <div class="card">
+          <h2>About Us</h2>
+          <p>
+            We operate as a trading and distribution partner, supporting installers, workshops,
+            and automotive businesses with dependable product availability and clear communication.
+          </p>
+        </div>
+
+        <div class="card" id="brand">
+          <h2>Our Brand</h2>
+          <p>
+            <b style="color:var(--text);">Delta Wraps</b> is our flagship brand focused on automotive solutions including
+            Paint Protection Films (PPF), Color Vinyl Wraps, and Nano Ceramic Window Films.
+          </p>
+          <ul>
+            <li>Installer-friendly product range</li>
+            <li>Consistent quality & performance</li>
+            <li>Support for B2B growth</li>
+          </ul>
+        </div>
+
+        <div class="card" id="values">
+          <h2>Business Philosophy</h2>
+          <p>
+            We believe in transparency, quality-driven products, and sustainable growth.
+            Our objective is to create trust, deliver value, and build a strong market presence across the GCC.
+          </p>
+          <ul>
+            <li>Transparent dealing</li>
+            <li>Professional standards</li>
+            <li>Reliable supply chain</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="offerings">
+      <div class="grid">
+        <div class="card">
+          <h2>PPF (Paint Protection Film)</h2>
+          <p>High-clarity protection for original paint, designed for durability and clean finish.</p>
+          <ul>
+            <li>Gloss & Matte options</li>
+            <li>Installer-friendly handling</li>
+            <li>Suitable for premium detailing studios</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Color Vinyl Wraps</h2>
+          <p>Color change solutions with modern finishes for personal and commercial vehicles.</p>
+          <ul>
+            <li>Multiple finishes & textures</li>
+            <li>Stable color & appearance</li>
+            <li>B2B supply for workshops</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Nano Window Films</h2>
+          <p>Heat & UV control solutions for vehicles and commercial needs.</p>
+          <ul>
+            <li>Privacy & comfort</li>
+            <li>Reduced heat penetration</li>
+            <li>Better cabin protection</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="y"></span> EBS Trading LLC. All rights reserved.</div>
+      <div>Company Profile Website</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

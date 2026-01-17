@@ -14,59 +14,90 @@
       --card:#FFFFFF;
       --border:#E6E8EC;
       --radius:16px;
+
+      /* Industrial Grey palette */
+      --ig-1:#3f4247;   /* industrial grey */
+      --ig-2:#2f3237;   /* darker industrial grey */
+      --ig-3:#24262a;   /* near charcoal */
     }
-    .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.logo img {
-  height: 42px;
-  width: auto;
-}
-  .logo span {
-  font-weight: 600;
-  font-size: 18px;
-  color: #111;
-}
+
     *{box-sizing:border-box}
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
     a{text-decoration:none;color:inherit}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
-   header{background:#fff;color:#111;border-bottom:1px solid var(--border);box-shadow: 0 2px 6px rgba(0,0,0,0.04);}
-    .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo-dot{width:14px;height:14px;border-radius:50%;background:var(--orange)}
-    .brand h1{font-size:16px;margin:0;letter-spacing:.3px}
+
+    /* Header: White background + dark text */
+    header{
+      background:#fff;
+      color:#111;
+      border-bottom:1px solid var(--border);
+      box-shadow:0 2px 6px rgba(0,0,0,.04);
+    }
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+
+    /* Logo only */
+    .logo{display:flex;align-items:center}
+    .logo img{height:40px;width:auto;display:block}
+
     nav{display:flex;gap:18px;flex-wrap:wrap}
-    nav a{color:#111;opacity:.9;font-size:14px;font-weight:500;}
+    nav a{color:#111;opacity:.9;font-size:14px;font-weight:600}
     nav a:hover{opacity:1;color:var(--orange)}
+
     .hero{padding:46px 0}
-    .hero-wrap{background:linear-gradient(135deg, #2B2E34 0%, #3A3F45 55%, #1F2327 100%);color:#fff;border-radius:var(--radius);padding:34px;border:1px solid rgba(255,255,255,.08)}
+
+    /* Hero box: Industrial Grey gradient */
+    .hero-wrap{
+      background:linear-gradient(135deg, var(--ig-1) 0%, var(--ig-2) 55%, var(--ig-3) 100%);
+      color:#fff;
+      border-radius:var(--radius);
+      padding:34px;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+    }
+
     .hero h2{margin:0 0 10px;font-size:34px;line-height:1.15}
-    .hero p{margin:0 0 18px;color:rgba(255,255,255,.85);max-width:760px}
-    .pill{display:inline-block;background:rgba(247,122,27,.14);color:#fff;border:1px solid rgba(247,122,27,.35);padding:8px 12px;border-radius:999px;font-size:13px;margin-bottom:14px}
+    .hero p{margin:0 0 18px;color:rgba(255,255,255,.90);max-width:760px}
+
+    .pill{
+      display:inline-block;
+      background:rgba(247,122,27,.16);
+      color:#fff;
+      border:1px solid rgba(247,122,27,.38);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      margin-bottom:14px
+    }
+
     .btns{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:12px 16px;border-radius:12px;font-weight:700;font-size:14px;display:inline-block}
+    .btn{padding:12px 16px;border-radius:12px;font-weight:800;font-size:14px;display:inline-block}
     .btn-primary{background:var(--orange);color:#111}
-    .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25)}
+    .btn-ghost:hover{border-color:rgba(255,255,255,.45)}
+
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 34px}
     .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
     .card h3{margin:0 0 8px;font-size:16px}
     .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+
     footer{padding:22px 0;color:var(--muted);font-size:13px}
     .footerline{border-top:1px solid var(--border);padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .hero h2{font-size:28px}
+    }
   </style>
 </head>
 <body>
+
   <header>
     <div class="container">
       <div class="topbar">
-        <div class="logo">
+        <a class="logo" href="index.html" aria-label="EBS Trading LLC Home">
           <img src="assets/ebs-logo.jpeg" alt="EBS Trading LLC Logo">
-           
-        </div>
+        </a>
+
         <nav>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -87,11 +118,13 @@
           EBS Trading LLC supplies premium automotive protection and styling solutions across the GCC,
           powered by our flagship brand <b>Delta Wraps</b>.
         </p>
+
         <div class="btns">
           <a class="btn btn-primary" href="brands.html">Explore Delta Wraps</a>
           <a class="btn btn-ghost" href="contact.html">Get a Quote</a>
         </div>
-        <p style="margin-top:16px;color:rgba(255,255,255,.78);font-size:13px">
+
+        <p style="margin-top:16px;color:rgba(255,255,255,.85);font-size:13px">
           Dubai, United Arab Emirates • +971563004171 • info@ebstrades.com
         </p>
       </div>
@@ -119,5 +152,6 @@
       </div>
     </footer>
   </main>
+
 </body>
 </html>

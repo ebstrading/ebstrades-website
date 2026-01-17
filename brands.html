@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brands | EBS Trading LLC</title>
+  <style>
+    :root{
+      --orange:#F77A1B;
+      --bg:#F5F6F8;
+      --text:#111318;
+      --muted:#5B5F66;
+      --card:#FFFFFF;
+      --border:#E6E8EC;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    header{
+      background:#fff;
+      color:#111;
+      border-bottom:1px solid var(--border);
+      box-shadow:0 2px 6px rgba(0,0,0,.04);
+    }
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+    .logo{display:flex;align-items:center}
+    .logo img{height:40px;width:auto;display:block}
+
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    nav a{color:#111;opacity:.9;font-size:14px;font-weight:600}
+    nav a:hover{opacity:1;color:var(--orange)}
+
+    .page{padding:34px 0}
+    h1{margin:0 0 10px;font-size:28px}
+    p.lead{margin:0 0 18px;color:var(--muted);max-width:820px}
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:20px;
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .card:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,.06)}
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:#111;
+      background:rgba(247,122,27,.18);
+      border:1px solid rgba(247,122,27,.35);
+      padding:6px 10px;
+      border-radius:999px;
+      margin-bottom:10px;
+    }
+    .card h2{margin:0 0 8px;font-size:18px}
+    .card p{margin:0 0 14px;color:var(--muted);line-height:1.5;font-size:14px}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:800;
+      font-size:14px;
+      background:var(--orange);
+      color:#111;
+    }
+
+    footer{padding:22px 0;color:var(--muted);font-size:13px}
+    .footerline{border-top:1px solid var(--border);padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <a class="logo" href="index.html" aria-label="EBS Trading LLC Home">
+          <img src="assets/ebs-logo.jpeg" alt="EBS Trading LLC Logo">
+        </a>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="brands.html">Brands</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page">
+      <h1>Our Brands</h1>
+      <p class="lead">
+        EBS Trading LLC operates and supplies automotive films & accessories across the GCC.
+        Our flagship brand is <b>Delta Wraps</b>.
+      </p>
+
+      <div class="grid">
+        <a class="card" href="https://deltawraps.com" target="_blank" rel="noopener">
+          <div class="badge">Flagship Brand</div>
+          <h2>Delta Wraps</h2>
+          <p>
+            Paint Protection Film (Clear PPF & Color PPF), Window Films (NCR, NC, TNC),
+            and Color Vinyl Wraps.
+          </p>
+          <span class="btn">Visit deltawraps.com</span>
+        </a>
+
+        <div class="card">
+          <div class="badge">Coming Soon</div>
+          <h2>More Brands</h2>
+          <p>
+            Add any future brands here (or additional divisions under EBS Trading LLC).
+          </p>
+          <span class="btn" style="background:#e9eaee;color:#111;border:1px solid var(--border);">Placeholder</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerline">
+        <div>© 2025 EBS Trading LLC. All rights reserved.</div>
+        <div>www.ebstrades.com</div>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
 

@@ -434,8 +434,8 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
 /* layer notes: one full-width panel under both columns */
 .stack-panel {
   position: relative; display: grid; gap: 1.1rem; margin-top: clamp(1.5rem, 3vw, 2.5rem); padding: 1.3rem 1.5rem 1.5rem;
-  border: 1px solid color-mix(in srgb, var(--band-fg) 16%, transparent); border-radius: 6px;
-  background: color-mix(in srgb, var(--band-deep) 46%, transparent);
+  border: 1px solid color-mix(in srgb, var(--band-fg) 24%, transparent); border-radius: 6px;
+  background: color-mix(in srgb, var(--band-fg) 10%, transparent);
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
 }
 .strip-cap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem 2rem; padding-bottom: 1rem; border-bottom: 1px solid color-mix(in srgb, var(--band-fg) 14%, transparent); font-size: .9375rem; color: var(--ink-2); }
@@ -455,3 +455,11 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
   .band .facts > div:nth-child(n+3) { border-top-color: color-mix(in srgb, var(--band-fg) 18%, transparent); }
 }
 @media (prefers-reduced-motion: reduce) { .stack .float { animation: none; } }
+
+/* home opening band: lighter lower half behind the layer notes and key figures */
+.band.hero.hero-home {
+  background:
+    radial-gradient(52rem 34rem at 84% 14%, color-mix(in srgb, var(--film-tpu) 22%, transparent), transparent 62%),
+    radial-gradient(60rem 26rem at 50% 100%, color-mix(in srgb, var(--film-tpu) 16%, transparent), transparent 70%),
+    linear-gradient(170deg, var(--band-2) 0%, var(--band) 42%, var(--band-2) 100%);
+}

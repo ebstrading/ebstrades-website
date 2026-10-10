@@ -30,6 +30,9 @@
   --tint: #05090B;
   --logo-light-bg: block;
   --logo-dark-bg: none;
+  --ok: #1F7A4D;
+  --tile-hi: #FFFFFF;
+  --tile-lo: #000000;
   --error: #A3261A;
 
   --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
@@ -56,6 +59,7 @@
     --on-accent: #1A0E03;
     --logo-light-bg: none;
     --logo-dark-bg: block;
+    --ok: #5FC08C;
     --error: #F08A7C;
     color-scheme: dark;
   }
@@ -79,6 +83,7 @@
   --on-accent: #1A0E03;
   --logo-light-bg: none;
   --logo-dark-bg: block;
+  --ok: #5FC08C;
   --error: #F08A7C;
   color-scheme: dark;
 }
@@ -463,3 +468,33 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
     radial-gradient(60rem 26rem at 50% 100%, color-mix(in srgb, var(--film-tpu) 16%, transparent), transparent 70%),
     linear-gradient(170deg, var(--band-2) 0%, var(--band) 42%, var(--band-2) 100%);
 }
+
+/* ---------- availability labels ---------- */
+.stock { display: inline-flex; align-items: center; gap: .5rem; justify-self: start; font: 500 .8125rem var(--font-data); letter-spacing: .04em; color: var(--ink); }
+.stock span { width: .6rem; height: .6rem; border-radius: 50%; flex: none; }
+.stock.in span { background: var(--ok); }
+.stock.order span { background: transparent; border: 2px solid var(--accent); }
+
+/* ---------- colour chart ---------- */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(9.25rem, 1fr)); gap: 1.5rem 1rem; }
+.tile { display: grid; gap: .3rem; align-content: start; min-width: 0; }
+.tile h3 { font-size: 1rem; margin-top: .45rem; overflow-wrap: anywhere; }
+.tile p { font-size: .875rem; color: var(--ink-2); }
+.tile-swatch { position: relative; overflow: hidden; aspect-ratio: 4 / 3; max-width: 100%; border-radius: 4px; border: 1px solid var(--line); background: var(--c); }
+.tile-swatch::after { content: ""; position: absolute; inset: 0; }
+.fx-gloss::after { background: linear-gradient(115deg, transparent 0 36%, color-mix(in srgb, var(--tile-hi) 42%, transparent) 46%, transparent 56% 100%); }
+.fx-metallic { background: linear-gradient(125deg, color-mix(in srgb, var(--c) 74%, var(--tile-hi)) 0%, var(--c) 46%, color-mix(in srgb, var(--c) 78%, var(--tile-lo)) 100%); }
+.fx-satin, .fx-pearl { background: radial-gradient(120% 90% at 25% 15%, color-mix(in srgb, var(--c) 82%, var(--tile-hi)) 0%, var(--c) 60%, color-mix(in srgb, var(--c) 92%, var(--tile-lo)) 100%); }
+.fx-matte::after { background: radial-gradient(120% 100% at 30% 10%, color-mix(in srgb, var(--tile-hi) 10%, transparent), transparent 70%); }
+.fx-shift { background: linear-gradient(125deg, var(--c) 28%, var(--c2) 100%); }
+.fx-sparkle { background: linear-gradient(125deg, var(--c) 35%, var(--c2, var(--c)) 100%); }
+.fx-sparkle::after, .fx-laser::after {
+  background-image: radial-gradient(color-mix(in srgb, var(--tile-hi) 85%, transparent) 0 .7px, transparent 1.1px), radial-gradient(color-mix(in srgb, var(--tile-hi) 60%, transparent) 0 .6px, transparent 1px);
+  background-size: 9px 9px, 13px 13px; background-position: 0 0, 5px 7px;
+}
+.fx-laser { background: linear-gradient(125deg, color-mix(in srgb, var(--c) 80%, #E9C46A) 0%, var(--c) 30%, color-mix(in srgb, var(--c) 78%, #5B8DEF) 62%, color-mix(in srgb, var(--c) 80%, #57C4A6) 100%); }
+.fx-carbon, .fx-carbon-clear {
+  background-color: var(--c);
+  background-image: repeating-linear-gradient(45deg, color-mix(in srgb, var(--tile-hi) 16%, transparent) 0 3px, transparent 3px 6px), repeating-linear-gradient(-45deg, color-mix(in srgb, var(--tile-lo) 22%, transparent) 0 3px, transparent 3px 6px);
+}
+.subnav a .data { margin-left: .5rem; color: var(--ink-2); }

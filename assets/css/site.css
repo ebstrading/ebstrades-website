@@ -349,6 +349,10 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
 .faq summary::after { content: "+"; font: 500 1.25rem/1 var(--font-data); color: var(--accent-ink); }
 .faq details[open] summary::after { content: "\2212"; }
 .faq details p { padding: 0 0 1.2rem; color: var(--ink-2); max-width: 44rem; }
+.qa-list { border-top: 1px solid var(--line); max-width: 52rem; }
+.qa { display: grid; gap: .5rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+.qa h3 { font-size: 1.125rem; }
+.qa p { color: var(--ink-2); max-width: 44rem; }
 
 /* ---------- CTA band ---------- */
 .cta { display: grid; grid-template-columns: minmax(0, 1.4fr) auto; gap: 2rem; align-items: center; }

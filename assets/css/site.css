@@ -15,6 +15,7 @@
   --band-fg: #EAF1F0;
   --band-muted: #A3B8BC;
   --band-line: #2B4954;
+  --band-deep: #081820;
   --accent: #DB7E30;
   --accent-ink: #A2510E;
   --on-accent: #1A0E03;
@@ -49,6 +50,7 @@
     --band-fg: #EAF1F0;
     --band-muted: #A3B8BC;
     --band-line: #2E4C57;
+    --band-deep: #0A1B22;
     --accent: #E58B3F;
     --accent-ink: #EE9A52;
     --on-accent: #1A0E03;
@@ -71,6 +73,7 @@
   --band-fg: #EAF1F0;
   --band-muted: #A3B8BC;
   --band-line: #2E4C57;
+  --band-deep: #0A1B22;
   --accent: #E58B3F;
   --accent-ink: #EE9A52;
   --on-accent: #1A0E03;
@@ -402,3 +405,41 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
   .brand-logo { height: 3.4rem; }
   .footer-logo { height: 3.75rem; }
 }
+
+/* ---------- richer opening bands ---------- */
+.band.hero, .band.page-hero {
+  background:
+    radial-gradient(52rem 34rem at 84% 14%, color-mix(in srgb, var(--film-tpu) 22%, transparent), transparent 62%),
+    radial-gradient(42rem 28rem at 4% 104%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 60%),
+    linear-gradient(155deg, var(--band-2) 0%, var(--band) 46%, var(--band-deep) 100%);
+}
+.hero-home { position: relative; overflow: hidden; padding-block: clamp(3.25rem, 7vw, 6rem) 0; }
+.hero-home .hero-grid { position: relative; }
+.stack { position: relative; }
+.stack > svg:not(.hero-ring), .stack-panel { position: relative; }
+.stack svg.hero-ring { position: absolute; left: 50%; top: -2.75rem; width: 128%; max-width: 38rem; height: auto; margin: 0; transform: translateX(-50%); pointer-events: none; }
+.ring-main { fill: var(--accent); fill-opacity: .17; }
+.ring-thin { fill: none; stroke: var(--band-fg); stroke-opacity: .2; stroke-width: 1.5; stroke-dasharray: 520 120 480 168; }
+.hero-home .eyebrow::before { content: ""; display: block; width: 3rem; height: 2px; margin-bottom: 1.1rem; background: var(--accent); }
+.hero-home h1 { font-size: clamp(2.1rem, 4.4vw, 3.5rem); }
+.hero-home h1 .hl { color: var(--accent); }
+.hero-home .btn-primary { box-shadow: 0 14px 34px -14px color-mix(in srgb, var(--accent) 80%, transparent); }
+.stack > svg:not(.hero-ring) { max-width: 30rem; overflow: visible; }
+.stack .float { animation: floaty 7s ease-in-out infinite alternate; }
+@keyframes floaty { from { transform: translateY(3px); } to { transform: translateY(-7px); } }
+.stack .face-top { stroke: var(--band-fg); stroke-opacity: .4; stroke-width: .75; }
+.stack .sheen { pointer-events: none; }
+.stack-panel {
+  display: grid; gap: 1rem; padding: 1.25rem 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--band-fg) 16%, transparent); border-radius: 6px;
+  background: color-mix(in srgb, var(--band-deep) 46%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.hero-facts { position: relative; margin-top: clamp(2.75rem, 6vw, 4.5rem); border-top-color: color-mix(in srgb, var(--band-fg) 18%, transparent); }
+.band .facts dd { color: var(--accent); }
+.band .facts > div + div { border-left-color: color-mix(in srgb, var(--band-fg) 18%, transparent); }
+.hero-facts > div { padding-block: 1.6rem 1.9rem; }
+@media (max-width: 46rem) {
+  .band .facts > div:nth-child(n+3) { border-top-color: color-mix(in srgb, var(--band-fg) 18%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) { .stack .float { animation: none; } }

@@ -413,29 +413,41 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
     radial-gradient(42rem 28rem at 4% 104%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 60%),
     linear-gradient(155deg, var(--band-2) 0%, var(--band) 46%, var(--band-deep) 100%);
 }
-.hero-home { position: relative; overflow: hidden; padding-block: clamp(3.25rem, 7vw, 6rem) 0; }
-.hero-home .hero-grid { position: relative; }
-.stack { position: relative; }
-.stack > svg:not(.hero-ring), .stack-panel { position: relative; }
-.stack svg.hero-ring { position: absolute; left: 50%; top: -2.75rem; width: 128%; max-width: 38rem; height: auto; margin: 0; transform: translateX(-50%); pointer-events: none; }
-.ring-main { fill: var(--accent); fill-opacity: .17; }
-.ring-thin { fill: none; stroke: var(--band-fg); stroke-opacity: .2; stroke-width: 1.5; stroke-dasharray: 520 120 480 168; }
-.hero-home .eyebrow::before { content: ""; display: block; width: 3rem; height: 2px; margin-bottom: 1.1rem; background: var(--accent); }
+.hero-home { position: relative; overflow: hidden; padding-block: clamp(2.5rem, 5vw, 4rem) 0; }
+.hero-home .hero-grid { position: relative; align-items: center; }
+.hero-home .hero-copy .eyebrow::before { content: ""; display: block; width: 3rem; height: 2px; margin-bottom: 1.1rem; background: var(--accent); }
 .hero-home h1 { font-size: clamp(2.1rem, 4.4vw, 3.5rem); }
 .hero-home h1 .hl { color: var(--accent); }
 .hero-home .btn-primary { box-shadow: 0 14px 34px -14px color-mix(in srgb, var(--accent) 80%, transparent); }
-.stack > svg:not(.hero-ring) { max-width: 30rem; overflow: visible; }
+
+/* film layers centred inside the logo ring: the ring is 1.3x the drawing, so the layers sit fully inside it */
+.hero-home .stack { position: relative; display: block; width: 100%; max-width: 30rem; margin-inline: auto; padding-block: 13%; }
+.hero-home .stack svg.stack-art { position: relative; display: block; width: 86%; max-width: none; height: auto; margin-inline: auto; overflow: visible; }
+.hero-home .stack svg.hero-ring { position: absolute; left: 50%; top: 50%; width: 112%; max-width: none; height: auto; margin: 0; transform: translate(-50%, -50%); pointer-events: none; }
+.ring-main { fill: var(--accent); fill-opacity: .17; }
+.ring-thin { fill: none; stroke: var(--band-fg); stroke-opacity: .2; stroke-width: 1.5; stroke-dasharray: 520 120 480 168; }
 .stack .float { animation: floaty 7s ease-in-out infinite alternate; }
-@keyframes floaty { from { transform: translateY(3px); } to { transform: translateY(-7px); } }
+@keyframes floaty { from { transform: translateY(3px); } to { transform: translateY(-6px); } }
 .stack .face-top { stroke: var(--band-fg); stroke-opacity: .4; stroke-width: .75; }
 .stack .sheen { pointer-events: none; }
+
+/* layer notes: one full-width panel under both columns */
 .stack-panel {
-  display: grid; gap: 1rem; padding: 1.25rem 1.4rem;
+  position: relative; display: grid; gap: 1.1rem; margin-top: clamp(1.5rem, 3vw, 2.5rem); padding: 1.3rem 1.5rem 1.5rem;
   border: 1px solid color-mix(in srgb, var(--band-fg) 16%, transparent); border-radius: 6px;
   background: color-mix(in srgb, var(--band-deep) 46%, transparent);
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
 }
-.hero-facts { position: relative; margin-top: clamp(2.75rem, 6vw, 4.5rem); border-top-color: color-mix(in srgb, var(--band-fg) 18%, transparent); }
+.strip-cap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem 2rem; padding-bottom: 1rem; border-bottom: 1px solid color-mix(in srgb, var(--band-fg) 14%, transparent); font-size: .9375rem; color: var(--ink-2); }
+.hero-home .stack-key { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem 1.75rem; }
+@media (max-width: 62rem) { .hero-home .stack-key { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) {
+  .hero-home .stack-key { grid-template-columns: minmax(0, 1fr); }
+  .hero-home .stack svg.stack-art { width: 82%; }
+  .hero-home .stack svg.hero-ring { width: 106%; }
+}
+
+.hero-facts { position: relative; margin-top: clamp(1.75rem, 3.5vw, 2.75rem); border-top-color: color-mix(in srgb, var(--band-fg) 18%, transparent); }
 .band .facts dd { color: var(--accent); }
 .band .facts > div + div { border-left-color: color-mix(in srgb, var(--band-fg) 18%, transparent); }
 .hero-facts > div { padding-block: 1.6rem 1.9rem; }

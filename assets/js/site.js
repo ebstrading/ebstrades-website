@@ -145,6 +145,10 @@
       });
     });
     copyBtn.addEventListener('click', function () { copyText(compose(), copyBtn, out); });
+    try {
+      var wanted = new URLSearchParams(window.location.search).get('country');
+      if (wanted) doc.getElementById('f-country').value = wanted.slice(0, 60);
+    } catch (e) { /* older browsers: leave the field empty */ }
     refresh();
   }
 })();

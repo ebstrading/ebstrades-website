@@ -83,7 +83,7 @@
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 6.5rem; }
 body {
   margin: 0;
   background: var(--paper);
@@ -172,10 +172,10 @@ h3 { font-size: 1.1875rem; font-weight: 700; font-stretch: 104%; letter-spacing:
 }
 .header-row { position: relative; display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1.25rem; min-height: 4.25rem; padding-block: .6rem; }
 .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--ink); }
-.brand-logo { display: block; height: 3rem; width: auto; }
+.brand-logo { display: block; height: 4rem; width: auto; }
 .brand-logo.on-light { display: var(--logo-light-bg); }
 .brand-logo.on-dark { display: var(--logo-dark-bg); }
-.footer-logo { height: 3.5rem; }
+.footer-logo { height: 4.25rem; }
 .brand-word { font-family: var(--font-display); font-stretch: 118%; font-weight: 850; font-size: 1.3rem; letter-spacing: -.02em; line-height: 1; }
 .brand-word small { display: block; margin-top: .3rem; font: 500 .625rem/1 var(--font-data); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); }
 .nav { margin-left: auto; display: flex; flex-wrap: wrap; align-items: center; gap: .15rem; }
@@ -397,4 +397,9 @@ td.num { font-family: var(--font-data); font-size: .875rem; font-variant-numeric
   .stack .layer { animation: none; }
   .btn { transition: none; }
   .btn:hover { transform: none; }
+}
+
+@media (max-width: 62rem) {
+  .brand-logo { height: 3.4rem; }
+  .footer-logo { height: 3.75rem; }
 }

@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1503M00SF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-Q1503M00SF');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q1503M00SF';
+    document.head.appendChild(s);
+  });
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -26,7 +31,9 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="assets/css/site.css?v=26001a4d55">
 <script>document.documentElement.className += ' js';</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://ebstrades.com/#organization", "name": "EBS Trading LLC", "legalName": "EBS Trading LLC", "url": "https://ebstrades.com/", "logo": "https://ebstrades.com/assets/ebs-logo.png", "email": "info@ebstrades.com", "telephone": "+971563004171", "description": "Trading of automotive films and accessories: clear paint protection film, colour PPF and window film under the Delta Wraps brand.", "address": {"@type": "PostalAddress", "streetAddress": "Dubai Industrial City", "addressLocality": "Dubai", "addressCountry": "AE"}, "areaServed": ["AE", "SA", "OM", "QA", "KW", "BH"], "brand": {"@type": "Brand", "@id": "https://ebstrades.com/brands#delta-wraps", "name": "Delta Wraps", "url": "https://www.deltawraps.com/", "description": "Delta Wraps is a brand of automotive films established in 2012: clear paint protection film, colour PPF and window film. It is a registered trademark of EBS Trading LLC, registered with the UAE Ministry of Economy."}, "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": "+971563004171", "email": "info@ebstrades.com", "availableLanguage": ["en"]}, "sameAs": ["https://www.deltawraps.com/", "https://www.linkedin.com/company/delta-ppfwf/", "https://www.instagram.com/delta.wraps/", "https://www.facebook.com/deltawraps01", "https://www.tiktok.com/@deltawraps"]}</script>
@@ -35,7 +42,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="index.html" aria-label="EBS Trading LLC home"><img class="brand-logo on-light" src="assets/ebs-logo.png" alt="EBS Trading LLC" width="400" height="182"><img class="brand-logo on-dark" src="assets/ebs-logo-light.png" alt="EBS Trading LLC" width="400" height="182"></a>
+    <a class="brand" href="index.html" aria-label="EBS Trading LLC home"><img class="brand-logo on-light" src="assets/ebs-logo.webp" alt="EBS Trading LLC" width="320" height="146"><img class="brand-logo on-dark" src="assets/ebs-logo-light.webp" alt="EBS Trading LLC" width="320" height="146"></a>
     <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="nav" id="site-nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="brands.html">Brands</a><a href="distributors.html">Distributors</a><a class="btn btn-primary btn-sm" href="contact.html">Request a quote</a></nav>
   </div>
@@ -304,7 +311,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <img class="brand-logo footer-logo" src="assets/ebs-logo-light.png" alt="EBS Trading LLC" width="400" height="182" loading="lazy">
+        <img class="brand-logo footer-logo" src="assets/ebs-logo-light.webp" alt="EBS Trading LLC" width="320" height="146" loading="lazy">
         <p>Automotive films and accessories trading. Home of the Delta Wraps&reg; brand. Dubai, United Arab Emirates.</p>
       </div>
       <div>

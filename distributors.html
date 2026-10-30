@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1503M00SF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-Q1503M00SF');
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q1503M00SF';
+    document.head.appendChild(s);
+  });
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -26,7 +31,9 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="assets/css/site.css?v=26001a4d55">
 <script>document.documentElement.className += ' js';</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What do you keep in stock?", "acceptedAnswer": {"@type": "Answer", "text": "Clear PPF and window film are always in stock in the UAE. Colour PPF comes in more than 350 colours, so each roll is supplied to order in the shade you choose."}}, {"@type": "Question", "name": "Why is colour PPF made to order?", "acceptedAnswer": {"@type": "Answer", "text": "Every customer wants a specific shade, and no supplier can hold more than 350 colours on the shelf. Ordering each roll for you means you get the exact colour, with urgent supply in 6 to 8 days or normal supply in 12 to 14 days."}}, {"@type": "Question", "name": "Do you ship outside the UAE?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, on request. We supply trade buyers in Saudi Arabia and the wider GCC, and we quote other countries case by case. Shipping is always confirmed before you place the order."}}, {"@type": "Question", "name": "Is there a minimum order?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the product and the destination. Tell us what you need and we will confirm the quantities we can supply."}}, {"@type": "Question", "name": "What roll sizes do you supply?", "acceptedAnswer": {"@type": "Answer", "text": "Clear PPF and colour PPF come in one size, 1.52 m × 15 m. NC and TNC window film come in one size, 1.52 m × 30 m. NCR window film comes in three widths, all 30 m long: 0.5 m, 1 m and 1.52 m."}}, {"@type": "Question", "name": "What warranty do the films carry?", "acceptedAnswer": {"@type": "Answer", "text": "Elite PPF carries 10 years. Advance PPF carries 5 years at 6.5 mil and 7 years at 7.5 mil. Window film carries up to 15 years on TNC, up to 8 years on NC and up to 5 years on NCR. Keep the purchase record, because it is needed to validate a claim."}}, {"@type": "Question", "name": "How long does an order take?", "acceptedAnswer": {"@type": "Answer", "text": "Clear PPF and window film are in stock in the UAE, and orders are typically processed in 2 to 5 business days, not counting weekends and public holidays. Colour PPF is made to order, with urgent supply in 6 to 8 days or normal supply in 12 to 14 days for delivery in the UAE. Transit time to other countries depends on the destination and the shipping method."}}, {"@type": "Question", "name": "Which delivery terms do you quote?", "acceptedAnswer": {"@type": "Answer", "text": "Tell us the terms you prefer when you enquire, for example collection in Dubai or delivery to your door, and we will quote on that basis where we can."}}, {"@type": "Question", "name": "Can I buy a single roll?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Single rolls are sold through the Delta Wraps® online store at deltawraps.com, with prices in AED."}}]}</script>
@@ -35,7 +42,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="index.html" aria-label="EBS Trading LLC home"><img class="brand-logo on-light" src="assets/ebs-logo.png" alt="EBS Trading LLC" width="400" height="182"><img class="brand-logo on-dark" src="assets/ebs-logo-light.png" alt="EBS Trading LLC" width="400" height="182"></a>
+    <a class="brand" href="index.html" aria-label="EBS Trading LLC home"><img class="brand-logo on-light" src="assets/ebs-logo.webp" alt="EBS Trading LLC" width="320" height="146"><img class="brand-logo on-dark" src="assets/ebs-logo-light.webp" alt="EBS Trading LLC" width="320" height="146"></a>
     <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="nav" id="site-nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="brands.html">Brands</a><a href="distributors.html" aria-current="page">Distributors</a><a class="btn btn-primary btn-sm" href="contact.html">Request a quote</a></nav>
   </div>
@@ -201,7 +208,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <img class="brand-logo footer-logo" src="assets/ebs-logo-light.png" alt="EBS Trading LLC" width="400" height="182" loading="lazy">
+        <img class="brand-logo footer-logo" src="assets/ebs-logo-light.webp" alt="EBS Trading LLC" width="320" height="146" loading="lazy">
         <p>Automotive films and accessories trading. Home of the Delta Wraps&reg; brand. Dubai, United Arab Emirates.</p>
       </div>
       <div>

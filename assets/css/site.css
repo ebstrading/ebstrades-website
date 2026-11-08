@@ -4,18 +4,19 @@
    and one drawn-apart film stack as the signature image. */
 
 :root {
-  --paper: #F2F5F4;
+  --band-glow: #C9CDD1;
+  --paper: #F4F4F4;
   --surface: #FFFFFF;
-  --surface-2: #E6ECEB;
-  --ink: #0E1B21;
-  --ink-2: #43555D;
-  --line: #CBD5D5;
-  --band: #0F242C;
-  --band-2: #17333D;
-  --band-fg: #EAF1F0;
-  --band-muted: #A3B8BC;
-  --band-line: #2B4954;
-  --band-deep: #081820;
+  --surface-2: #E9EAEA;
+  --ink: #1B1D1F;
+  --ink-2: #4F5357;
+  --line: #D2D4D6;
+  --band: #26282B;
+  --band-2: #33363A;
+  --band-fg: #F1F2F3;
+  --band-muted: #B4B8BC;
+  --band-line: #45494E;
+  --band-deep: #141517;
   --accent: #DB7E30;
   --accent-ink: #A2510E;
   --on-accent: #1A0E03;
@@ -42,18 +43,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0A1418;
-    --surface: #101D23;
-    --surface-2: #16272E;
-    --ink: #E6EEEE;
-    --ink-2: #A0B3B8;
-    --line: #25393F;
-    --band: #122830;
-    --band-2: #1A3742;
-    --band-fg: #EAF1F0;
-    --band-muted: #A3B8BC;
-    --band-line: #2E4C57;
-    --band-deep: #0A1B22;
+    --paper: #111213;
+    --surface: #1A1B1D;
+    --surface-2: #232528;
+    --ink: #EDEEEF;
+    --ink-2: #ADB1B5;
+    --line: #33363A;
+    --band: #202225;
+    --band-2: #2C2F33;
+    --band-fg: #F1F2F3;
+    --band-muted: #B4B8BC;
+    --band-line: #43474C;
+    --band-deep: #0E0F10;
     --accent: #E58B3F;
     --accent-ink: #EE9A52;
     --on-accent: #1A0E03;
@@ -66,18 +67,18 @@
 }
 
 :root[data-theme="dark"] {
-  --paper: #0A1418;
-  --surface: #101D23;
-  --surface-2: #16272E;
-  --ink: #E6EEEE;
-  --ink-2: #A0B3B8;
-  --line: #25393F;
-  --band: #122830;
-  --band-2: #1A3742;
-  --band-fg: #EAF1F0;
-  --band-muted: #A3B8BC;
-  --band-line: #2E4C57;
-  --band-deep: #0A1B22;
+  --paper: #111213;
+  --surface: #1A1B1D;
+  --surface-2: #232528;
+  --ink: #EDEEEF;
+  --ink-2: #ADB1B5;
+  --line: #33363A;
+  --band: #202225;
+  --band-2: #2C2F33;
+  --band-fg: #F1F2F3;
+  --band-muted: #B4B8BC;
+  --band-line: #43474C;
+  --band-deep: #0E0F10;
   --accent: #E58B3F;
   --accent-ink: #EE9A52;
   --on-accent: #1A0E03;
@@ -418,7 +419,7 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
 /* ---------- richer opening bands ---------- */
 .band.hero, .band.page-hero {
   background:
-    radial-gradient(52rem 34rem at 84% 14%, color-mix(in srgb, var(--film-tpu) 22%, transparent), transparent 62%),
+    radial-gradient(52rem 34rem at 84% 14%, color-mix(in srgb, var(--band-glow) 14%, transparent), transparent 62%),
     radial-gradient(42rem 28rem at 4% 104%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 60%),
     linear-gradient(155deg, var(--band-2) 0%, var(--band) 46%, var(--band-deep) 100%);
 }
@@ -468,8 +469,8 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
 /* home opening band: lighter lower half behind the layer notes and key figures */
 .band.hero.hero-home {
   background:
-    radial-gradient(52rem 34rem at 84% 14%, color-mix(in srgb, var(--film-tpu) 22%, transparent), transparent 62%),
-    radial-gradient(60rem 26rem at 50% 100%, color-mix(in srgb, var(--film-tpu) 16%, transparent), transparent 70%),
+    radial-gradient(52rem 34rem at 84% 14%, color-mix(in srgb, var(--band-glow) 14%, transparent), transparent 62%),
+    radial-gradient(60rem 26rem at 50% 100%, color-mix(in srgb, var(--band-glow) 10%, transparent), transparent 70%),
     linear-gradient(170deg, var(--band-2) 0%, var(--band) 42%, var(--band-2) 100%);
 }
 

@@ -18,7 +18,7 @@
   --band-line: #45494E;
   --band-deep: #141517;
   --accent: #DB7E30;
-  --accent-ink: #A2510E;
+  --accent-ink: #DB7E30;
   --on-accent: #1A0E03;
   --film-top: #CFEFEB;
   --film-tpu: #57B5B6;
@@ -55,8 +55,8 @@
     --band-muted: #B4B8BC;
     --band-line: #43474C;
     --band-deep: #0E0F10;
-    --accent: #E58B3F;
-    --accent-ink: #EE9A52;
+    --accent: #DB7E30;
+    --accent-ink: #DB7E30;
     --on-accent: #1A0E03;
     --logo-light-bg: none;
     --logo-dark-bg: block;
@@ -79,8 +79,8 @@
   --band-muted: #B4B8BC;
   --band-line: #43474C;
   --band-deep: #0E0F10;
-  --accent: #E58B3F;
-  --accent-ink: #EE9A52;
+  --accent: #DB7E30;
+  --accent-ink: #DB7E30;
   --on-accent: #1A0E03;
   --logo-light-bg: none;
   --logo-dark-bg: block;
@@ -127,7 +127,7 @@ h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.005em; line-height:
 .eyebrow {
   font-family: var(--font-data);
   font-size: .8125rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--accent-ink);
@@ -231,7 +231,7 @@ h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.005em; line-height:
 .stack text { fill: var(--band-fg); font: 500 15px var(--font-data); }
 .stack-key { display: grid; gap: .55rem; font-size: 1rem; color: var(--ink-2); }
 .stack-key li { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .5rem; align-items: baseline; }
-.stack-key b { font: 500 .8125rem var(--font-data); color: var(--accent-ink); }
+.stack-key b { font: 600 .8125rem var(--font-data); color: var(--accent-ink); }
 .stack-key strong { color: var(--ink); font-weight: 600; }
 .stack figcaption { font-size: .9375rem; color: var(--ink-2); border-top: 1px solid var(--line); padding-top: .8rem; }
 
@@ -302,7 +302,7 @@ h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.005em; line-height:
 /* ordered process */
 .steps { counter-reset: step; }
 .steps > li { counter-increment: step; display: grid; gap: .55rem; align-content: start; padding-top: 1.1rem; border-top: 2px solid var(--accent); }
-.steps > li::before { content: "0" counter(step); font: 500 .8125rem var(--font-data); letter-spacing: .1em; color: var(--accent-ink); }
+.steps > li::before { content: "0" counter(step); font: 600 .8125rem var(--font-data); letter-spacing: .1em; color: var(--accent-ink); }
 .steps p { color: var(--ink-2); font-size: 1.0625rem; }
 
 /* ---------- tables ---------- */
@@ -363,7 +363,7 @@ td.num { font-family: var(--font-data); font-size: .9375rem; font-variant-numeri
 /* ---------- form ---------- */
 .form { display: grid; gap: 1.5rem; }
 .form fieldset { margin: 0; padding: 0; border: 0; display: grid; gap: 1rem; min-width: 0; }
-.form legend { padding: 0; margin-bottom: .25rem; font: 500 .8125rem var(--font-data); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
+.form legend { padding: 0; margin-bottom: .25rem; font: 600 .8125rem var(--font-data); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
 .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .field { display: grid; gap: .35rem; min-width: 0; }
 .field.full { grid-column: 1 / -1; }

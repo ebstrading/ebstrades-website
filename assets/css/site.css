@@ -277,12 +277,9 @@ h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.005em; line-height:
 .vlt-row { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: .6rem; }
 .pane-wrap { display: grid; gap: .45rem; justify-items: center; }
 .pane {
-  position: relative; width: 100%; aspect-ratio: 3 / 4; max-width: 100%; overflow: hidden;
-  border-radius: 3px; border: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--sky-1) 0%, var(--sky-2) 58%, var(--sand) 58%, var(--sand-2) 100%);
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; max-width: 100%; object-fit: cover;
+  border-radius: 3px; border: 1px solid var(--line); background: #1a1d20;
 }
-.pane::before { content: ""; position: absolute; left: 58%; top: 16%; width: 26%; aspect-ratio: 1; border-radius: 50%; background: var(--sun); }
-.pane::after { content: ""; position: absolute; inset: 0; background: var(--tint); opacity: calc(1 - var(--vlt) / 100); }
 .pane-wrap span { font: 500 .75rem var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
 @media (max-width: 64rem) { .vlt-row { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
